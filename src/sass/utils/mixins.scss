@@ -1,0 +1,14 @@
+@mixin on-hover($prop: background-color, $value: tomato, $duration: .4s, $delay: 0s) {
+  transition: $prop $duration $delay;
+  &:hover {
+    #{$prop}: $value;
+  }
+}
+
+@mixin clearfix {
+  &:after {
+      content: "";
+      display: block;
+      clear: both;
+  }
+}

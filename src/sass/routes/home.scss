@@ -1,0 +1,49 @@
+& {
+  display: grid;
+  grid-template-rows: auto 1fr 1fr;
+  grid-template-areas:
+    'notification'
+    'main-text'
+    'button';
+  overflow: hidden;
+  .main-text {
+    margin: auto;
+    grid-area: main-text;
+  }
+  .notification {
+    font-weight: lighter;
+    text-align: center;
+    color: rgba(255,255,255,.8);
+    padding: 1em;
+    background-color: $dark-text;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transform: translateY(-200vh);
+    &.show{
+      animation: from-top-to-top 4s;
+    }
+  }
+  .name {
+    color: rgba(62, 77, 142, .9);
+    animation: rainbow 10s infinite;
+  }
+  .sub-title {
+    display: flex;
+    align-items: flex-start;
+    animation: from-right .9s $bez-bounce;
+  }
+  .taunt {
+    margin: 0 5px;
+    animation: taunt  2.5s linear 2s infinite alternate;
+  }
+  h1 {
+    animation: from-right .6s $bez-bounce;
+  }
+  a {
+    margin: 0 auto auto auto;
+    animation: from-bottom 1.3s $bez-bounce;
+    grid-area: button;
+  }
+
+}

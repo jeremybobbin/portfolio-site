@@ -1,0 +1,42 @@
+@import "utils/animations";
+@import "utils/mixins";
+@import "utils/var";
+
+@import "base-styles";
+
+.app {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+}
+
+
+header {
+  grid-area: header;
+  @import 'sections/header';
+}
+
+main {
+  grid-area: main;
+  &.home {
+    @import 'routes/home';
+  }
+  &.portfolio {
+    @import 'routes/portfolio';
+  }
+  &.playgroud {
+    @import 'routes/playground';
+  }
+  &.contact {
+    @import 'routes/contact';
+  }
+}
+
+footer {
+  grid-area: footer;
+  @import 'sections/footer';
+}

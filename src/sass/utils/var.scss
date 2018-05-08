@@ -1,0 +1,12 @@
+$dark-text: #343a40;
+$o-grey: rgba(255, 255, 255, 0.6);
+$o-white: rgba(225,255,255, .8);
+$o-purpe: rgba(62, 77, 142, .8);
+$primary: rgba(77, 226, 147, .8);
+$nav-border: 1px rgba(255,255,255,.3) solid;
+$bez-bounce: cubic-bezier(.94,1.7,.04,.69);
+
+$hamburgers: 3;
+$max-hex-perline: 2;
+$hex-marg: 3%;
+$hex-width: (100% - $hex-marg * ($max-hex-perline + 1)) / $max-hex-perline;
